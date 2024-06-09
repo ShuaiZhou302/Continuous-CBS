@@ -1,0 +1,25 @@
+# ninja log v6
+16	981	7396406157143480	CMakeFiles/CCBS.dir/config.cpp.obj	808b76a91cb1b4c
+395	993	7396406160943211	CMakeFiles/CCBS.dir/simplex/objectivefunction.cpp.obj	7f13197a940018c
+327	1018	7396406160265296	CMakeFiles/CCBS.dir/simplex/constraint.cpp.obj	5c2ab3949c7b2ea1
+304	1047	7396406160035254	CMakeFiles/CCBS.dir/simplex/columnset.cpp.obj	c8fc1e8ff718dacb
+362	1825	7396406160610406	CMakeFiles/CCBS.dir/simplex/matrix.cpp.obj	4d3fd6dfb5e3592d
+28	1630	7396406157270267	CMakeFiles/CCBS.dir/tinyxml2.cpp.obj	73f6034cff584f87
+428	1685	7396406161271227	CMakeFiles/CCBS.dir/simplex/simplex.cpp.obj	188b8d255a40227d
+98	819	7396406630003419	CMakeFiles/CCBS.dir/simplex/variable.cpp.obj	98749eec37d45ffe
+311	1973	7396407970578812	CMakeFiles/CCBS.dir/simplex/columnset.cpp.obj	9d3047459c2b2646
+382	2073	7396407971287045	CMakeFiles/CCBS.dir/simplex/constraint.cpp.obj	b3866269d96a736a
+430	2082	7396407971764462	CMakeFiles/CCBS.dir/simplex/objectivefunction.cpp.obj	9e7369a8c240be4b
+17	2101	7396407967639215	CMakeFiles/CCBS.dir/config.cpp.obj	7789eb6e0a28f9b2
+1974	2890	7396407987206483	CMakeFiles/CCBS.dir/simplex/variable.cpp.obj	e5910975c3c26e31
+50	2920	7396407967977375	CMakeFiles/CCBS.dir/xml_logger.cpp.obj	727bbe561977c222
+206	3142	7396407969522643	CMakeFiles/CCBS.dir/task.cpp.obj	f34b67d54088ded6
+410	3317	7396407971573706	CMakeFiles/CCBS.dir/simplex/matrix.cpp.obj	f04d741c84dd68d2
+461	3325	7396407972079616	CMakeFiles/CCBS.dir/simplex/simplex.cpp.obj	b256db7d0e6f4d1f
+30	3328	7396407967762349	CMakeFiles/CCBS.dir/tinyxml2.cpp.obj	1078f8de5fb72534
+139	3816	7396407968860807	CMakeFiles/CCBS.dir/heuristic.cpp.obj	29051650b7fa0620
+6	3999	7396407967536010	CMakeFiles/CCBS.dir/main.cpp.obj	61361eeb4f22cbd9
+82	4335	7396407968285065	CMakeFiles/CCBS.dir/map.cpp.obj	3a2f094a72a9ddd8
+154	5229	7396407969004422	CMakeFiles/CCBS.dir/sipp.cpp.obj	eaa22dffbe93004f
+249	5727	7396407969956241	CMakeFiles/CCBS.dir/cbs.cpp.obj	85dc099daf15c22a
+5727	8148	7396408024735360	CCBS.exe	459cb020f1fa9297

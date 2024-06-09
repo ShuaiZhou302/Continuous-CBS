@@ -1,0 +1,9 @@
+"C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" --preset default -S "C:\Users\David Zhou\Documents\GitHub\Continuous-CBS" -B "C:\Users\David Zhou\Documents\GitHub\Continuous-CBS\build"
+Preset CMake variables:
+
+  CMAKE_TOOLCHAIN_FILE="C:/random/vcpkg/scripts/buildsystems/vcpkg.cmake"
+
+-- Found Boost: C:/random/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake (found version "1.85.0") found components: multi_index 
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/David Zhou/Documents/GitHub/Continuous-CBS/build

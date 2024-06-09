@@ -1,9 +1,10 @@
-cmake_minimum_required( VERSION 2.8 )
+cmake_minimum_required( VERSION 3.10 )
 
 project( CCBS )
 
 set(Boost_USE_STATIC_LIBS OFF) 
-find_package(Boost COMPONENTS multi_index)
+find_package(Boost REQUIRED COMPONENTS multi_index)
+#target_link_libraries(main PRIVATE Boost::multi_index)
 include_directories( ${Boost_INCLUDE_DIRS} )
 include_directories( "." )
 
@@ -54,6 +55,7 @@ set( HEADER_FILES
 	 simplex/simplex.h
 	 simplex/simplexexceptions.h
 	 simplex/sizemismatchexception.h
-	 simplex/variable.h)
+	 simplex/variable.h
+		anyway.h)
 
 add_executable( CCBS ${SOURCE_FILES} ${HEADER_FILES} )

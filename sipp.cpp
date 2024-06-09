@@ -489,7 +489,7 @@ Path SIPP::find_path(Agent agent, const Map &map, std::list<Constraint> cons, He
     {
         starts = {get_endpoints(agent.start_id, agent.start_i, agent.start_j, 0, CN_INFINITY).at(0)};
         goals = {get_endpoints(agent.goal_id, agent.goal_i, agent.goal_j, 0, CN_INFINITY).back()};
-        parts = find_partial_path(starts, goals, map, h_values);
+        part s = find_partial_path(starts, goals, map, h_values);
         expanded = int(close.size());
         if(parts[0].cost < 0)
             return Path();
