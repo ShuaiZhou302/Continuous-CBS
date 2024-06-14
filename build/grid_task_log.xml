@@ -15,7 +15,7 @@
     <agent start_i="15" start_j="19" goal_i="20" goal_j="27"/>
     <agent start_i="13" start_j="21" goal_i="20" goal_j="31"/>
     <log>
-        <summary time="0.72363860000000002" flowtime="312.94321354969156" makespan="46.142135623730944"/>
+        <summary time="0.72446279999999996" flowtime="312.94321354969156" makespan="46.142135623730944"/>
         <agent number="0">
             <path duration="45.313708498984759">
                 <section number="0" start_i="1" start_j="9" goal_i="2" goal_j="10" duration="1.4142135623730951"/>

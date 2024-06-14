@@ -122,12 +122,12 @@ std::vector<Node> SIPP::reconstruct_path(Node curNode)
 {
     path.nodes.clear();
     if(curNode.parent != nullptr)
-    do
-    {
-        path.nodes.insert(path.nodes.begin(), curNode);
-        curNode = *curNode.parent;
-    }
-    while(curNode.parent != nullptr);
+        do
+        {
+            path.nodes.insert(path.nodes.begin(), curNode);
+            curNode = *curNode.parent;
+        }
+        while(curNode.parent != nullptr);
     path.nodes.insert(path.nodes.begin(), curNode);
     for(unsigned int i = 0; i < path.nodes.size(); i++)
     {
@@ -319,7 +319,7 @@ std::vector<Node> SIPP::get_endpoints(int node_id, double node_i, double node_j,
         return nodes;
     else
         for(unsigned int k = 0; k < collision_intervals[node_id].size(); k++)
-        {    
+        {
             unsigned int i(0);
             while(i < nodes.size())
             {
@@ -489,7 +489,7 @@ Path SIPP::find_path(Agent agent, const Map &map, std::list<Constraint> cons, He
     {
         starts = {get_endpoints(agent.start_id, agent.start_i, agent.start_j, 0, CN_INFINITY).at(0)};
         goals = {get_endpoints(agent.goal_id, agent.goal_i, agent.goal_j, 0, CN_INFINITY).back()};
-        part s = find_partial_path(starts, goals, map, h_values);
+        parts = find_partial_path(starts, goals, map, h_values);
         expanded = int(close.size());
         if(parts[0].cost < 0)
             return Path();
