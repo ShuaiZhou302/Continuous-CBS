@@ -13,7 +13,7 @@ void SIPP::clear()
 
 double SIPP::dist(const Node& a, const Node& b)
 {
-    return std::sqrt(pow(a.i - b.i, 2) + pow(a.j - b.j, 2));
+    return std::sqrt(pow(a.i - b.i, 2) + pow(a.j - b.j, 2)) * ((this->agent.id % 5) + 1);
 }
 
 void SIPP::find_successors(Node curNode, const Map &map, std::list<Node> &succs, Heuristic &h_values, Node goal)
@@ -25,6 +25,7 @@ void SIPP::find_successors(Node curNode, const Map &map, std::list<Node> &succs,
         newNode.i = move.i;
         newNode.j = move.j;
         newNode.id = move.id;
+        //double agentDuration = 2; //(this->agent.id % 5) + 1;
         double cost = dist(curNode, newNode);
         newNode.g = curNode.g + cost;
         std::vector<std::pair<double, double>> intervals(0);
@@ -378,16 +379,24 @@ double SIPP::check_endpoint(Node start, Node goal)
 
 Path SIPP::find_path(Agent agent, const Map &map, std::list<Constraint> cons, Heuristic &h_values)
 {
+
     this->clear();
     this->agent = agent;
+    std::cout<<"agent id: "<<agent.id<<std::endl;
     make_constraints(cons);
 
     std::vector<Node> starts, goals;
     std::vector<Path> parts, results, new_results;
     Path part, result;
     int expanded(0);
+    if (sipp_debug) {
+        std::cout<<"enter here"<<std::endl;
+    }
     if(!landmarks.empty())
     {
+        if (sipp_debug) {
+            std::cout<<"enter !empty"<<std::endl;
+        }
         for(unsigned int i = 0; i <= landmarks.size(); i++)
         {
             if(i == 0)
@@ -487,6 +496,9 @@ Path SIPP::find_path(Agent agent, const Map &map, std::list<Constraint> cons, He
     }
     else
     {
+        if (sipp_debug) {
+            std::cout<<"enter empty ?"<<std::endl;
+        }
         starts = {get_endpoints(agent.start_id, agent.start_i, agent.start_j, 0, CN_INFINITY).at(0)};
         goals = {get_endpoints(agent.goal_id, agent.goal_i, agent.goal_j, 0, CN_INFINITY).back()};
         parts = find_partial_path(starts, goals, map, h_values);

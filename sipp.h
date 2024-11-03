@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <map>
 #include <set>
+#define sipp_debug 1
 class SIPP
 {
 public:
