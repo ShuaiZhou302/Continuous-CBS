@@ -438,7 +438,7 @@ Path SIPP::find_path(Agent agent, const Map &map, std::list<Constraint> cons, He
                 starts.clear();
                 for(auto p:results)
                     starts.push_back(p.nodes.back());
-                double offset = sqrt(pow(map.get_i(landmarks[i].id1) - map.get_i(landmarks[i].id2), 2) + pow(map.get_j(landmarks[i].id1) - map.get_j(landmarks[i].id2), 2)) * ((this->agent.id % 5) + 1);
+                double offset = sqrt(pow(map.get_i(landmarks[i].id1) - map.get_i(landmarks[i].id2), 2) + pow(map.get_j(landmarks[i].id1) - map.get_j(landmarks[i].id2), 2)); //* ((this->agent.id % 5) + 1);
                 goals = get_endpoints(landmarks[i].id2, map.get_i(landmarks[i].id2), map.get_j(landmarks[i].id2), landmarks[i].t1 + offset, landmarks[i].t2 + offset);
                 if(goals.empty())
                     return Path();

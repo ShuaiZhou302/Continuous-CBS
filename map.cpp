@@ -233,7 +233,6 @@ bool Map::get_roadmap(const char *FileName)
     for(element = root->FirstChildElement("node"); element; element = element->NextSiblingElement("node"))
     {
         data = element->FirstChildElement();
-
         stream.str("");
         stream.clear();
         stream << data->GetText();
